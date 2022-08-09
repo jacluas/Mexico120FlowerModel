@@ -3,7 +3,7 @@
 
 We share the pre-trained 512-VGG CNN model as research support in Mexico native flora identification. We believe that this pre-trained model may be a good starting point for future research in flower identification. Transfer learning from pre-trained models on ImageNet 2012 dataset was used.
 
-Pre-trained model can be found here: [https://github.com/jacluas/Mexico120FlowerModel/releases](url)
+Pre-trained model can be found here: [https://github.com/jacluas/Mexico120FlowerModel/releases](https://github.com/jacluas/Mexico120FlowerModel/releases)
 
 ### Usage
 
