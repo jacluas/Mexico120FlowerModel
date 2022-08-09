@@ -8,8 +8,7 @@ Pre-trained model can be found here: [https://github.com/jacluas/Mexico120Flower
 
 ### Usage
 
-The model is shared in the form of H5 format, that is, a file format to store structured data to easily share. Keras saves models in this format as it can easily store the weights and model configuration in a single file. We used Keras version 2.2.4, with Tensorflow 1.13.1 as backend, and Python version 3.7.3.
-
+The model is shared in the form of H5 format, that is, a file format to store structured data to easily share. Keras saves models in this format as it can easily store the weights and model configuration in a single file. 
 
 
 ### How to consume the pre-trained 512-VGG model (from Mexico 120 Flower dataset)
