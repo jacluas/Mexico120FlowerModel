@@ -18,7 +18,7 @@ python predict.py MODEL_NAME.h5 IMAGE_TEST_PATCH
 
 Examples:
 ```python
-	python predict.py model_512_vgg TEST/Achillea_millefolium/GNB_1.png
-	python predict.py model_512_vgg TEST/Cordia_boissieri/GBN_2.png
-	python predict.py model_512_vgg TEST/Ipomoea_triloba/GBN_1.png
+	python predict.py model_512_vgg TEST/Achillea_millefolium/GNB_1.jpeg
+	python predict.py model_512_vgg TEST/Cordia_boissieri/GBN_2.jpeg
+	python predict.py model_512_vgg TEST/Ipomoea_triloba/GBN_1.jpeg
 ```
