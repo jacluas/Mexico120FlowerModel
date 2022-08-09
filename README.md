@@ -15,7 +15,7 @@ The model is shared in the form of H5 format, that is, a file format to store st
 ### How to consume the pre-trained 512-VGG model (from Mexico 120 Flower dataset)
 
 We used Keras version 2.2.4, with Tensorflow 1.13.1 as backend, and Python version 3.7.3.
-
+You can evaluate a sample image by performing the following:
 
 ```python
 python predict.py MODEL_NAME.h5 IMAGE_TEST_PATCH
