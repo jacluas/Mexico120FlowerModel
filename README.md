@@ -23,13 +23,13 @@ python predict.py MODEL_NAME.h5 IMAGE_TEST_PATCH TOP-K
 
 Examples Top-_1_:
 ```python
-	python predict.py model_512_vgg TEST/Achillea_millefolium/AM1.jpeg
+	python predict.py model/model_512_vgg TEST/Achillea_millefolium/AM1.jpeg
 
 	Predictions:
 	'Achillea millefolium',	0.9999955892562866
 ```
 ```python
-	python predict.py model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 1
+	python predict.py mode/model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 1
 	
 	Predictions:
 	'Cordia boissieri', 1.0
@@ -38,7 +38,7 @@ Examples Top-_1_:
 Examples Top-_5_:
 ```python
 
-	python predict.py model_512_vgg TEST/Achillea_millefolium/AM1.jpeg -k 5
+	python predict.py model/model_512_vgg TEST/Achillea_millefolium/AM1.jpeg -k 5
 	
 	Predictions:
 	'Achillea millefolium',		0.9999955892562866
@@ -48,7 +48,7 @@ Examples Top-_5_:
 	'Verbesina encelioides',	9.17614335210759e-12
 ```
 ```python
-	python predict.py model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 5
+	python predict.py model/model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 5
 	
 	Predictions:
 	'Cordia boissieri',		1.0
