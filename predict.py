@@ -15,11 +15,13 @@ from keras.applications.vgg16 import preprocess_input
 parser = ArgumentParser()
 parser.add_argument('pathModel', help='path to load model', type=str)
 parser.add_argument('pathData', help='path to image (test)', type=str)
+parser.add_argument('-k', type=int, help='Top K responses', default=1)
 args = parser.parse_args()
 
 
 modelPath = args.pathModel 	#'VGG'
 imagePath = args.pathData 	#'images/TEST/Achillea_millefolium/AM1.jpeg'
+topk        = args.k
 
 def getTopK(answer: np.array, class_list: list, K: int = 5):
     '''Get top N ordered answers'''
@@ -68,6 +70,6 @@ y_pred1 = model.predict(img_array, steps=1)[0]
 #pred = np.argmax(y_pred1, axis=1)
 
 #model response
-topk = getTopK(y_pred1, classes, 1)
-output = '\n'.join('{},\t{}'.format(*x) for x in topk)
+responses = getTopK(y_pred1, classes, topk)
+output = '\n'.join('{},\t{}'.format(*x) for x in responses)
 print('\nPredictions:\n'+ output)
