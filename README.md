@@ -18,19 +18,43 @@ We used Keras version 2.2.4, with Tensorflow 1.13.1 as backend, and Python versi
 You can evaluate a sample image by performing the following:
 
 ```python
-python predict.py MODEL_NAME.h5 IMAGE_TEST_PATCH
+python predict.py MODEL_NAME.h5 IMAGE_TEST_PATCH TOP-K
 ```
 
-Examples:
+Examples Top-_1_:
 ```python
-	python predict.py model_512_vgg TEST/Achillea_millefolium/AM_1.jpeg
-	python predict.py model_512_vgg TEST/Cordia_boissieri/CB_2.jpeg
-	python predict.py model_512_vgg TEST/Ipomoea_triloba/IT_3.jpeg
+	python predict.py model_512_vgg TEST/Achillea_millefolium/AM1.jpeg
+
+	Predictions:
+	'Achillea millefolium',	0.9999955892562866
+```
+```python
+	python predict.py model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 1
+	
+	Predictions:
+	'Cordia boissieri', 1.0
 ```
 
+Examples Top-_5_:
 ```python
-Predictions:
-'Achillea millefolium',	0.9999955892562866
-'Cordia boissieri', 1.0
-'Ipomoea triloba', 1.0
+
+	python predict.py model_512_vgg TEST/Achillea_millefolium/AM1.jpeg -k 5
+	
+	Predictions:
+	'Achillea millefolium',		0.9999955892562866
+	'Heliotropium angiospermum',	4.443768830242334e-06
+	'Turnera diffusa',		1.945797342695066e-11
+	'Asclepias subulata',		1.160856393650489e-11
+	'Verbesina encelioides',	9.17614335210759e-12
+```
+```python
+	python predict.py model_512_vgg TEST/Cordia_boissieri/CB1.jpeg -k 5
+	
+	Predictions:
+	'Cordia boissieri',		1.0
+	'Pontederia crassipes',		6.602185909088121e-09
+	'Argemone mexicana',		7.986839661855427e-11
+	'Oenothera speciosa',		4.6942175840891665e-11
+	'Cosmos bipinnatus',		3.5377999358168766e-13
+
 ```
